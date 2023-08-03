@@ -7,6 +7,7 @@
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+    cursor: pointer;
 }
 .button-small{
     font-size: 12px;
@@ -35,4 +36,44 @@
     background-color: var(--x-primary-color);
     color: white;
     border: 1px solid var(--x-primary-color);
+}
+.button-info{
+    background-color: var(--x-info-color);
+    color: white;
+    border: 1px solid var(--x-info-color);
+}
+.button-success{
+    background-color: var(--x-success-color);
+    color: white;
+    border: 1px solid var(--x-success-color);
+}
+.button-warning{
+    background-color: var(--x-warning-color);
+    color: white;
+    border: 1px solid var(--x-warning-color);
+}
+.button-danger{
+    background-color: var(--x-danger-color);
+    color: white;
+    border: 1px solid var(--x-danger-color);
+}
+.button-danger:hover{
+    background-color: var(--x-danger-color-light);
+    border: 1px solid var(--x-danger-color-light);
+}
+.button-warning:hover{
+    background-color: var(--x-warning-color-light);
+    border: 1px solid var(--x-warning-color-light);
+}
+.button-success:hover{
+    background-color: var(--x-success-color-light);
+    border: 1px solid var(--x-success-color-light);
+}
+.button-info:hover{
+    background-color: var(--x-info-color-light);
+    border: 1px solid var(--x-info-color-light);
+}
+.button-primary:hover{
+    background-color: var(--x-primary-color-light);
+    border: 1px solid var(--x-primary-color-light);
 }
