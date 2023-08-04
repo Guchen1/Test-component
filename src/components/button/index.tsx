@@ -1,13 +1,18 @@
-import { defineComponent,useSlots,type ExtractPublicPropTypes } from "vue";
+import { defineComponent,useSlots,type ExtractPublicPropTypes, ref } from "vue";
 import '../../styles/index.css'
 import css from "./styles/index.module.css"
 interface props{
-    [key:string]:any
+    [key:string|number]:any
 }
+
 export const buttonProps ={
     type: {
         type: String,
         default: "primary",
+    },
+    plain:{
+        type:Boolean,
+        default:false
     },
     size: {
         type: String,
@@ -40,8 +45,8 @@ const ButtonType:props={
     text:css['button-text'],
 }
 const ButtonPlainType:props={
-    default:css['button-plain-default'],
-    plain:css['button-plain'],
+    0:css['button-plain-default'],
+    1:css['button-plain'],
 }
 export type ButtonProps = ExtractPublicPropTypes<typeof buttonProps>
 export const Button= defineComponent({
@@ -49,10 +54,10 @@ export const Button= defineComponent({
     props:  buttonProps,
 
     setup(props: ButtonProps, { slots }) {
-
+        const classList = ref<string[]>([css.button,ButtonSize[props.size as string], ButtonType[props.type as string],ButtonPlainType[Number(props.plain)]])
         console.log(ButtonSize)
         return () => (
-            <button class={css.button+' '+ButtonSize[props.size as string] +' '+ButtonType[props.type as string]}>{slots.icon?.()}
+            <button class={classList.value}>{slots.icon?.()}
             {slots.default?.()}</button>
         )
     },
