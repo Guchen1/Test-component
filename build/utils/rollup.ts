@@ -5,7 +5,7 @@ export const getCompPackage = () => {
     const { version, dependencies, peerDependencies } = require(compPackage);
     return {
       version,
-      dependencies: Object.keys(dependencies),
+      dependencies: Object.keys(dependencies?dependencies: {}),
       peerDependencies: Object.keys(peerDependencies? peerDependencies: {}),
     };
   };

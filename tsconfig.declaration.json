@@ -4,8 +4,7 @@
       "outDir": "es",
       "declaration": true,
       "emitDeclarationOnly": true,
-        "declarationDir": "es/src",
     },
-    "include": ["src"],
+    "include": ["src","index.ts"],
     "exclude": ["node_modules", "**/__tests__/**", "**/__demos__/**", "**/*.md"]
   }

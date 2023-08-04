@@ -10,9 +10,7 @@ import { target, generateExternal, generatePaths } from "../utils/rollup";
 import postcss from 'rollup-plugin-postcss'
 export const buildModules = async () => {
   // 入口
-  console.log(path.resolve(compRoot, "index.ts"));
-  const input = [path.resolve(compRoot, "index.ts")];
-  console.log('success');
+  const input = [path.resolve(compRoot, "../index.ts")];
   // 编译解析
   const bundle = await rollup({
     input,
@@ -39,7 +37,7 @@ export const buildModules = async () => {
       preserveModules: true, // 与原始模块创建相同的文件
       preserveModulesRoot: "src",
       sourcemap: true, // 生成 sourcemap
-      entryFileNames: `[name].mjs`, // 生成文件名
+      entryFileNames: `[name].js`, // 生成文件名
     }),
     bundle.write({
       format: "cjs",
