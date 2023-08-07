@@ -1,10 +1,10 @@
 import type { App } from "vue";
-import {Button} from './components'
+import * as x from './components'
 interface componentsType {
     [key: string]: any;
 }
 const components:componentsType = {
-    Button
+    ...x
 }
 const install = (app: App) => {
     Object.keys(components).forEach((key) => {
@@ -14,4 +14,4 @@ const install = (app: App) => {
 export default {
     install
 };
-export {Button}
+export * from './components'
