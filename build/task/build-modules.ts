@@ -5,7 +5,7 @@ import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import vueDefineOptions from "unplugin-vue-define-options/rollup";
 import esbuild from "rollup-plugin-esbuild";
-import { compRoot, outputEsm, outputCjs } from "../utils/paths";
+import { compRoot, outputEsm, outputCjs,output } from "../utils/paths";
 import { target, generateExternal, generatePaths } from "../utils/rollup";
 import postcss from 'rollup-plugin-postcss'
 export const buildModules = async () => {
@@ -49,5 +49,12 @@ export const buildModules = async () => {
       sourcemap: true,
       entryFileNames: `[name].js`,
     }),
+    bundle.write({
+      format: "umd",
+      dir:output,
+      name: "xVue3",
+      sourcemap: true,  // 生成 sourcemap
+      entryFileNames: `x-vue3.js`,  // 生成文件名
+    })
   ]);
 };

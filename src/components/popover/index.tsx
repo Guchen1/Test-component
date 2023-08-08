@@ -2,7 +2,27 @@ import { Teleport, defineComponent, onMounted, ref, watch, withModifiers, type R
 import { useElementHover,useMouseInElement } from '@vueuse/core'
 import css from './styles/index.module.css'
 export const Popover = defineComponent({
+    name: 'Popover',
+    props:{
+        wrapperStyle:{
+            type:Object,
+            default:()=>({})
+        },
+        bodyStyle:{
+            type:Object,
+            default:()=>({})
+        },
+        popStyle:{
+            type:Object,
+            default:()=>({})
+        }
+    },
     setup(props, { slots }) {
+        if(document.getElementById('pop')==null){
+            const pop=document.createElement('div')
+            pop.id='pop'
+            document.body.appendChild(pop)
+        }
         const body=ref<HTMLElement|undefined>(undefined)
         const {elementPositionX,elementPositionY,elementWidth}=useMouseInElement(body,{})
         const target=ref(null)
@@ -25,11 +45,11 @@ export const Popover = defineComponent({
             }
         })
         return () => (
-            <div class={css.full} onMousedown={withModifiers(()=>{},['self','prevent'])}>
-                <div ref={body} class={css.full} id='body'  >{slots.default?.()}</div>
-                {<Teleport to="body">{
+            <div style={props.wrapperStyle} class={css.fullPart} onMousedown={withModifiers(()=>{},['self','prevent'])}>
+                <div style={props.bodyStyle} ref={body} class={[css.full]} id='body'  >{slots.default?.()}</div>
+                {<Teleport to="#pop">{
                     visible.value ?
-                        <div ref={target} style={{left:elementPositionX.value+elementWidth.value+'px',top:elementPositionY.value+'px'}} onMousedown={withModifiers(()=>{},['stop','prevent'])} class={css.popover}>{slots.content?.()}</div>
+                        <div ref={target} style={{left:elementPositionX.value+elementWidth.value+'px',top:elementPositionY.value+'px',...props.popStyle}} onMousedown={withModifiers(()=>{},['stop','prevent'])} class={[css.popover]}>{slots.content?.()}</div>
                         : <div></div>
                 }
                     </Teleport>

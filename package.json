@@ -1,9 +1,10 @@
 {
   "name": "x-vue3",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "A UI library for Vue 3",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "unpkg": "dist/x-vue3.min.js",
   "scripts": {
     "dev": "vite",
     "build": "gulp --require @esbuild-kit/cjs-loader -f build/index.ts"
@@ -16,6 +17,7 @@
   "files": [
     "es",
     "lib",
+    "dist",
     "README.md"
   ],
   "devDependencies": {
