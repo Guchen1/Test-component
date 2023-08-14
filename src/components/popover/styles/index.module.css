@@ -31,10 +31,14 @@
     text-indent: 0px;
     text-transform: none;
     vertical-align: baseline;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
     white-space: normal;
     word-spacing: 0px;
     left: 100px;
     bottom: -30px;
+    max-width: 200px;
+    max-height:350px;
     /* Color & Background */
     background-attachment: scroll;
     background-color: rgb(255, 255, 255);
@@ -44,12 +48,7 @@
     color: rgb(36, 36, 36);
 
     /* Box */
-    height: 102.375px;
-    width: 215.875px;
     border: 1px solid #FFFFFF none;
-    min-height: 0px;
-    max-width: none;
-    min-width: 0px;
     /* Positioning */
     position: absolute;
     float: none;
