@@ -2,7 +2,7 @@ import { compPackage } from "./paths";
 export const target= "esnext";
 export const getCompPackage = () => {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { version, dependencies, peerDependencies } = require(compPackage);
+    const { version, dependencies, peerDependencies } =compPackage;
     return {
       version,
       dependencies: Object.keys(dependencies?dependencies: {}),

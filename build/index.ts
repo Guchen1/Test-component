@@ -1,8 +1,7 @@
-import { series } from "gulp";
-import { parallel } from "gulp";
+import gulp from "gulp";
 import { buildModules } from "./task/build-modules";
 import { generateTypes } from "./task/generate-types";
 import { generateIndex } from "./task/generate-index";
 import { clean } from "./task/clean";
 
-export default series(clean,parallel(buildModules,generateTypes));
+export default gulp.series(clean,gulp.parallel(buildModules,generateTypes));
