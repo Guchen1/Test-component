@@ -1,0 +1,180 @@
+.button{
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px var(--spacingHorizontalM);
+    background-color: var(--colorNeutralBackground1);
+    color: var(--colorNeutralForeground1);
+    border: var(--strokeWidthThin) solid var(--colorNeutralStroke1);
+    font-family: var(--fontFamilyBase);
+    min-width: 96px;
+    cursor: pointer;
+    border-radius:var(--borderRadiusMedium);
+    font-size: var(--fontSizeBase300);
+    font-weight: var(--fontWeightSemibold);
+    line-height: var(--lineHeightBase300);
+    vertical-align: middle;
+    transition-duration: var(--durationFaster);
+    transition-property: background, border, color;
+    transition-timing-function: var(--curveEasyEase);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+.button-icon{
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    min-width: 20px;
+}
+
+.button-icon-before{
+    margin-right: 6px;
+}
+.button-icon-after{
+    margin-left: 6px;
+}
+.button-icon-center{
+    margin: 0px;
+}
+/* Part of hover and active */
+.button:hover{
+    background-color: var(--colorNeutralBackground1Hover);
+}
+.button:active{
+    background-color: var(--colorNeutralBackground1Pressed);
+}
+.button-primary:hover{
+    background-color: var(--colorBrandBackgroundHover);
+}
+.button-primary:active{
+    background-color: var(--colorBrandBackgroundPressed);
+}
+.button-outline:hover{
+    background-color: transparent;
+    border-color: var(--colorNeutralStroke1Hover);
+}
+.button-outline:active{
+    background-color: transparent;
+    border-color: var(--colorNeutralStroke1Pressed);
+}
+.button-subtle:hover{
+    background-color: var(--colorSubtleBackgroundHover);
+}
+.button-subtle:active{
+    background-color: var(--colorSubtleBackgroundPressed);
+}
+.button-transparent:hover{
+    background-color: transparent;
+    color: var(--colorNeutralForeground2BrandHover);
+}
+.button-transparent:active{
+    background-color: transparent;
+    color: var(--colorNeutralForeground2BrandPressed);
+}
+
+/*Part of size */
+.button-small{
+    font-size: var(--fontSizeBase200);
+    padding-left: var(--spacingHorizontalS);
+    padding-right: var(--spacingHorizontalS);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    min-width: 64px;
+    font-weight: var(--fontWeightRegular);
+    line-height: var(--lineHeightBase200);
+}
+.button-medium{
+
+}
+.button-large{
+    line-height: var(--lineHeightBase400);
+    padding-left: var(--spacingHorizontalL);
+    padding-right: var(--spacingHorizontalL);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: var(--fontWeightSemibold);
+    font-size: var(--fontSizeBase400);
+
+}
+.button-icon-only{
+    min-width: 0;
+}
+.button-small.button-with-icon {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.button-large.button-with-icon {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.button-small.button-icon-only {
+    padding: 1px;
+}
+.button-large.button-icon-only {
+    padding:7px;
+}
+.button-medium.button-icon-only {
+    padding: 5px;
+}
+
+.button-large .button-icon{
+    font-size: 24px;
+    height: 24px;
+    width: 24px;
+    min-width: 24px;
+}
+.button-rounded{
+    border-radius:var(--borderRadiusMedium)
+}
+.button-square{
+    border-radius:var(--borderRadiusNone);
+}
+.button-circular{
+    border-radius:var(--borderRadiusCircular);
+}
+
+/* Part of Appearance */
+.button-primary{
+    border-color: transparent;
+    background-color: var(--colorBrandBackground);
+    color:var(--colorNeutralForegroundOnBrand)
+}
+.button-outline{
+    background-color: transparent;
+}
+.button-subtle{
+    color: var(--colorNeutralForeground2);
+    border-color: transparent;
+    background-color: var(--colorSubtleBackground);
+}
+.button-transparent{
+    color: var(--colorNeutralForeground2);
+    border-color: transparent;
+    background-color: transparent;   
+}
+
+.button-disabled{
+    cursor: not-allowed;
+    color: var(--colorNeutralForegroundDisabled);
+    border-color: var(--colorNeutralStrokeDisabled);
+    background-color: var(--colorNeutralBackgroundDisabled);
+}
+/*禁止hover和active*/
+.button-disabled:hover{
+    background-color: var(--colorNeutralBackgroundDisabled);
+}
+.button-disabled:active{
+    background-color: var(--colorNeutralBackgroundDisabled);
+}
+
+.button-subtle:hover > .button-icon{
+    color: var(--colorNeutralForeground2BrandHover);
+}
+.button-subtle:active > .button-icon{
+    color: var(--colorNeutralForeground2BrandPressed);
+}

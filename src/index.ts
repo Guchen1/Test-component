@@ -1,5 +1,6 @@
 import type { App } from "vue";
 import * as x from './components'
+import './styles/index.css'
 interface componentsType {
     [key: string]: any;
 }

@@ -1,0 +1,33 @@
+.compoundButton-container{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+.compoundButton-secondaryContent{
+    color: var(--colorNeutralForeground2);
+    font-size: var(--fontSizeBase200);
+    font-weight: var(--fontWeightRegular);
+    line-height: 100%;
+}
+.compoundButton-secondaryContent.button-primary{
+    color:var(--colorNeutralForegroundOnBrand)
+}
+
+.compoundButton-medium{
+    padding-left: var(--spacingHorizontalM);
+    padding-right: var(--spacingHorizontalM);
+    padding-bottom: var(--spacingHorizontalL);
+    padding-top: 14px;
+}
+.compoundButton-small{
+    padding-left: var(--spacingHorizontalS);
+    padding-right: var(--spacingHorizontalS);
+    padding-bottom: var(--spacingHorizontalMNudge);
+    padding-top: var(--spacingHorizontalS)
+}
+.compoundButton-large{
+    padding-left: var(--spacingHorizontalL);
+    padding-right: var(--spacingHorizontalL);
+    padding-bottom: var(--spacingHorizontalXL);
+    padding-top:  18px;
+}

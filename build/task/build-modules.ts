@@ -61,7 +61,7 @@ export const buildModules = async () => {
       format: "umd",
       dir: output,
       exports: "named",
-      name: "xVue3",
+      name: "XVue3",
       globals: {
         vue: "Vue",
         "@vueuse/core": "VueUse",
@@ -73,7 +73,7 @@ export const buildModules = async () => {
       format: "umd",
       dir: output,
       exports: "named",
-      name: "xVue3",
+      name: "XVue3",
       globals: {
         vue: "Vue",
         "@vueuse/core": "VueUse",
