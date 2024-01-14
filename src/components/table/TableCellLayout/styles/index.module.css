@@ -1,0 +1,33 @@
+.table-cell-layout-media{
+    align-items: center;
+    font-size: 20px;
+    display: inline-flex;
+}
+.table-cell-layout-media-body{
+    font-size: 20px;
+    color: var(--colorNeutralForeground1);
+}
+.table-cell-layout-content{
+    flex-direction: column;
+    display: flex;
+}
+.table-cell-layout{
+    row-gap: var(--spacingHorizontalS);
+    column-gap: var(--spacingHorizontalS);
+    align-items: center;
+    display: flex;
+}
+.table-cell-layout-description{
+    font-size: var(--fontSizeBase200);
+    color: var(--colorNeutralForeground2);
+    line-height: var(--lineHeightBase200);
+}
+.table-cell-layout-media-primary{
+    font-size:24px;
+}
+.table-cell-layout-media-body-primary{
+    font-size:24px;
+}
+.table-cell-layout-main-primary{
+    font-weight: var(--fontWeightSemibold);
+}

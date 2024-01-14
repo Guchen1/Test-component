@@ -1,0 +1,14 @@
+.table{
+    table-layout: fixed;
+    vertical-align: middle;
+    display: block;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: var(--colorSubtleBackground);
+    line-height: var(--lineHeightBase300);
+    font-weight: var(--fontWeightRegular);
+    font-size: var(--fontSizeBase300);
+    font-family: var(--fontFamilyBase);
+    text-align: left;
+    color: var(--colorNeutralForeground1);
+}

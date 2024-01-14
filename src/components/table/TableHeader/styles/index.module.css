@@ -1,0 +1,7 @@
+.table-header{
+    display: block;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    position: sticky;
+}

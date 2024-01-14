@@ -1,0 +1,11 @@
+.table-cell{
+    height: 44px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding:0px var(--spacingHorizontalS);
+    vertical-align: middle;
+    flex-basis: 0px;
+    flex-shrink: 1;
+    flex-grow: 1;
+}

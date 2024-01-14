@@ -1,5 +1,5 @@
-import { Button, buttonProps } from "../";
-import { defineComponent, type ExtractPropTypes } from "vue";
+import { Button, buttonProps } from "../Button";
+import { defineComponent, type ExtractPropTypes, type PropType, type VNode,type Component  } from "vue";
 import css from "./styles/index.module.css";
 export const compoundButtonProps = {
   ...buttonProps,
@@ -8,7 +8,7 @@ export const compoundButtonProps = {
     default: "",
   },
   contentContainer: {
-    type :[Object,String],
+    type :[String, Object] as PropType<string | VNode|Component>,
     default:"span"
   }
 };

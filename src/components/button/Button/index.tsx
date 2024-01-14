@@ -3,11 +3,13 @@ import {
   useSlots,
   type ExtractPublicPropTypes,
   ref,
+  type PropType,
+  type VNode,
+  type Component
 } from "vue";
 import css from "./styles/index.module.css";
-interface props {
-  [key: string | number]: any;
-}
+import type { props } from '../../index';
+
 
 export const buttonProps = {
   as:{
@@ -44,7 +46,7 @@ export const buttonProps = {
     default: false,
   },
   icon: {
-    type: [Object, String],
+    type: [String, Object] as PropType<string | VNode|Component >,
     default:undefined,
   },
 };

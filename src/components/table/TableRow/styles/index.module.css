@@ -1,0 +1,42 @@
+.table-row{
+    display: flex;
+    align-items: center;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    border-bottom-color: var(--colorNeutralStroke2);
+    border-bottom-style: solid;
+    border-bottom-width: var(--strokeWidthThin);
+    box-sizing: border-box;
+}
+
+.table-row-neutral{
+    border-color: var(--colorNeutralStrokeOnBrand);
+    color: var(--colorNeutralForeground1Hover);
+    background-color: var(--colorSubtleBackgroundSelected);
+}
+
+.table-row-brand{
+    background-color: var(--colorBrandBackground2);
+    border-color: var(--colorTransparentStrokeInteractive);
+}
+.table-row-in-body:hover{
+    background-color: var(--colorSubtleBackgroundHover);
+    color: var(--colorNeutralForeground1Hover);
+}
+.table-row-in-body:active{
+    background-color: var(--colorSubtleBackgroundPressed);
+    color: var(--colorNeutralForeground1Pressed);
+}
+.table-row-brand.table-row-in-body:hover{
+    background-color: var(--colorSubtleBackgroundHover);
+    color: var(--colorNeutralForeground1Hover);
+}
+.table-row-brand.table-row-in-body:active{
+    background-color: var(--colorBrandBackground2);
+}
+.table-row-neutral.table-row-in-body{
+    border-color: var(--colorNeutralStrokeOnBrand);
+    color: var(--colorNeutralForeground1Hover);
+    background-color: var(--colorSubtleBackgroundSelected);
+}

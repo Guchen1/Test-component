@@ -1,0 +1,26 @@
+.table-header-cell{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding:0px var(--spacingHorizontalS);
+    font-weight: var(--fontWeightRegular);
+    flex-basis: 0px;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+.table-header-cell-body{
+    min-height: 32px;
+    height:100%;
+    row-gap: var(--spacingHorizontalXS);
+    column-gap: var(--spacingHorizontalXS);
+    padding:0px;
+    overflow: visible;
+    line-height: normal;
+    font-size: inherit;
+    box-sizing: content-box;
+    resize: horizontal;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    font-weight: var(--fontWeightRegular);
+}
